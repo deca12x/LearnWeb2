@@ -1,0 +1,125 @@
+<!--- Syntax1 notes by deca:
+  1) html version, head and body
+  2) header, main, footer...
+  3) text, image
+  4) anchor - link to webpage, link to element, or dead link
+  5) embedded link - within text or image
+  6) ordered lists and unordered lists (bullet points)
+  7) input - textbox, radio buttons, checkboxes
+  8) div - general purpose container --->
+
+<!--- This tells the browser we are using HTML5 --->
+<!DOCTYPE html>
+
+<html>
+
+  <!---  Head is the part that is not displayed on the website. It contains:
+  Title, any links to CSS for styles, links to custom favicons,
+  and other metadata (e.g. author, important keywords that describe the document...) --->
+  <head>
+    <title>Text that appears in the tab</title>
+  </head>
+
+  <!--- Within body, we define different parts of a webpage with tags like:
+  main, header, footer, nav, video, article, section... --->
+  <body>
+
+    <header>
+      <h1>Biggest headline</h1>
+      <h2>Second biggest headline</h2>
+      <h3>Third biggest headline</h3>
+    </header>
+
+    <main>
+      
+      <!--- Text --->
+      <p>Paragraph text</p>
+
+      <!--- Image --->
+      <img src="https://img-9gag-fun.9cache.com/photo/ad93b02_460s.jpg" alt="Text displayed if image not found">
+      
+      <!--- Anchor element: link to webpage. Target blank makes the link open in another tab --->
+      <a href="https://www.youtube.com/watch?v=W4CJ3vMvuxA&ab_channel=FrankReynolds%28BestofItsAlwaysSunnyinPhiladelphia%29"
+      target="_blank">Text of external link</a>
+
+      <!--- Anchor element: link to an element in the same page --->
+      <a href="#id of linked text">Text of internal link</a>
+      <p id="id of linked text">Destination of internal link</p>
+
+      <!--- Dead links: You may add elements to your website before knowing where they link. --->
+      <a href="#">Text of dead link</a>
+
+      <!--- Nest a link in another element: i.e. text link within paragraph --->
+      <p>
+        Here's a
+        <a target="_blank" href="https://www.youtube.com/watch?v=dY8BSHVWGxk&ab_channel=FrankReynolds%28BestofItsAlwaysSunnyinPhiladelphia%29">
+         link to another webpage</a> embedded in a paragraph.
+      </p>
+
+      <!--- Nest another element in a link: i.e. whole element (e.g. image) becomes a link --->
+      <a href="https://www.youtube.com/watch?v=kjS6bQ5OQ-o&ab_channel=EvisDaison">
+        <img src="https://carboncostume.com/wordpress/wp-content/uploads/2018/08/ongo-goblogian-itsalwayssunny.jpg"
+        alt="Ongo Gablogian">
+      </a>
+
+      <!--- Unordered list (bullet points) --->
+      <ul>
+        <li>Bullet point</li>
+        <li>Bullet point</li>
+      </ul>
+
+      <!--- Ordered list (numbered) --->
+      <ol>
+        <li>First point</li>
+        <li>Second point</li>
+      </ol>
+
+      <!--- Interactive: get text input from user --->
+      <input type="text" placeholder="Placeholder text">
+
+      <!--- Interactive: embed input element in form. Action informs where data will go --->
+      <form action="https://www.freecatphotoapp.com/submit-cat-photo">
+        <input type="text" placeholder="Placeholder text">
+        <button type="submit">Text on submit button</button>
+      </form>
+
+      <!--- Interactive: required input --->
+      <input type="text" required placeholder="Placeholder text">
+
+      <!--- Interactive: radio buttons, nesting input element inside label element 
+        ...all radio buttons need the same name attribute, to create a radio button group
+        ...set a for attribute on the label to match id attribute of the input
+        ...set a value attribute to inform the server of user's selection
+        ...set a checked attribute, to choose any options to be checked by default--->
+      <label for="RadioOneId"> 
+        <input id="RadioOneId" value="RadioOneChosen" type="radio" name="RadioButtonGroup" checked>
+        Radio 1 displayed text 
+      </label>
+
+      <label for="RadioTwoId"> 
+        <input id="RadioTwoId" value="RadioTwoChosen" type="radio" name="RadioButtonGroup">
+        Radio 2 displayed text 
+      </label>
+
+      <!--- Interactive: checkboxes - same best practice rules as radio buttons above --->
+      <label for="CheckboxOneId">
+        <input id="CheckboxOneId" value="CheckboxOneChosen" type="checkbox" name="CheckboxesGroup">
+        Checkbox 1 displayed text
+      </label>
+
+      <label for="CheckboxTwoId">
+        <input id="CheckboxTwoId" value="CheckboxTwoChosen" type="checkbox" name="CheckboxesGroup">
+        Checkbox 2 displayed text
+      </label>
+
+      <!--- div is a general purpose container of other elements, it's really common --->
+      <div>
+        <!--- any element can go in here --->
+      </div>
+
+
+    </main>
+
+  </body>
+
+</html>
