@@ -7,14 +7,56 @@
     </head>
 
     <body>
-        <header>
-            <h2 style="color: blue;">Headline</h2>
-        </header>
+        <div>
+            <!--- APPROACH 1 of 4: Style (in-line CSS) a single element directly e.g. the color property --->
+            <p style="font-size: 16px;">Styling a single element</p>
 
-        <main>   
-            <!--- Text --->
-            <p>Paragraph text</p>
-        </main>
+            <!--- APPROACH 2 of 4: Style block e.g. this CSS selector makes all h2 elements a specific size --->
+            <style> h2 { font-size: 30px; } </style>
+            <h2>Styling an element type using a style block </h2>
+
+            <!--- APPROACH 3 of 4: CSS Classes within Style Blocks - reusable styles
+            ...we can put many classes in one style element --->
+            <style> .smallText { font-size: 20px; } </style>
+            <p class="smallText">Styling an element by creating a class in a style block, then calling that class</p>
+
+            <!--- APPROACH 4 of 4: CSS IDs within Style Blocks - IDs are unique to an element
+            ...IDs have higher specificity (importance) than Classes --->
+            <style> #someTextElement { color: rgb(184, 62, 195); } </style>
+            <p id="someTextElement">Assigning IDs to HTML elements, like this, can be used to style with CSS or to do more with Javascript</p>
+
+
+            <!--- Types of styles (we can create many style classes in a single Style Block)
+            ...some styles can be set both in px or in % --->
+
+            <style>
+                .textClass { font-size: 14px; font-family: serif; color: blue; }
+                .imageClass { width: 300px; }
+                .imageClass2 {
+                    border-color: red;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-radius: 50%;
+                }
+                .backgroundClass { background-color: aquamarine;}
+            </style>
+
+        </div>
+
+        <div class="backgroundClass">
+            <p class="textClass">Calling a class that sets the font size, font type and colour</p>
+
+            <!--- Call multiple classes to an element, with a space like this --->
+            <img class="imageClass imageClass2" src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2014%2F09%2Fcharlie-day-kitten-mittens.jpg" alt="Text displayed if image not found">
+        </div>
+        
+        <div>
+            <!--- Import and use Google fonts: e.g. Lobster font --->
+            <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+            <p style="font-family: Lobster, serif;">Import and use external font Lobster. The font will degrade to serif if Lobster can't be found</p>
+        </div>
+
+        
 
     </body>
 
