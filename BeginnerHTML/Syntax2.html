@@ -1,5 +1,10 @@
 <!DOCTYPE html>
 
+<!---------------------------------------------------------------------------------------
+SYNTAX 2 learned from https://www.freecodecamp.org/learn/responsive-web-design/#basic-css
+notes by deca
+---------------------------------------------------------------------------------------->
+
 <html>
 
     <head>
@@ -36,7 +41,7 @@
                     border-color: red;
                     border-width: 5px;
                     border-style: solid;
-                    border-radius: 50%;
+                    border-radius: 10%;
                 }
                 .backgroundClass { background-color: aquamarine;}
             </style>
@@ -56,7 +61,46 @@
             <p style="font-family: Lobster, serif;">Import and use external font Lobster. The font will degrade to serif if Lobster can't be found</p>
         </div>
 
-        
+
+        <!--- All HTML elements are boxes!
+        Three properties control the space around each HTML element:
+            1) Padding - space within element
+            2) Border - border of element
+            3) Margin - space outside elements --->
+        <style>
+            .paddingClass { padding: 20px; }
+            .borderClass { border-style: solid; border-color: black; border-width: 5px; }
+            .marginClass { margin: 10px; }
+        </style>
+
+        <div class="paddingClass borderClass">Text of upper div element
+            <div 
+            style="text-align: center; background-color: rgb(249, 192, 71);"
+            class="borderClass marginClass">
+                Text of lower div element
+            </div>
+        </div>
+
+        <style>
+            .paddingClass2 { padding: 40px 25px 20px 10px; }
+            .marginClass2 { margin: 30px 60px 20px 10px; }
+        </style>
+
+        <div class="marginClass2 borderClass">Padding styles using clockwise notation (top, right, bottom, left) - distance from other elements
+            <div style="text-align: center; background-color: rgb(213, 212, 234);" class="borderClass paddingClass2">
+                Margin styles using clockwise notation (top, right, bottom, left) - size of element and position of content
+            </div>
+        </div>
+
+        <!--- Types of CSS Selectors:
+            1) id / 2) class / 3) type / ...others
+            The type selector will set properties for all elements of that type --->
+        <style> [type='text'] { color: rgb(200, 79, 99); } </style>
+        <p type="text">Using the Type Selector to style all elements of text type</p>
+
+        <!--- Keep going from this chapter:
+                "Understand Absolute versus Relative Units"
+                https://www.freecodecamp.org/learn/responsive-web-design/#basic-css --->
 
     </body>
 
