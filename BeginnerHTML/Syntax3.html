@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<!---------------------------------------------------------------------------------------
+SYNTAX 3 - Applied Visual Design
+learned from https://www.freecodecamp.org/learn/responsive-web-design/applied-visual-design
+notes by @deca12x
+
+
+---------------------------------------------------------------------------------------->
+
+<html>
+
+    <head>
+        <title>Text that appears in the tab</title>
+    </head>
+
+    <body>
+        <!--- 1) Text Align - options are:
+            - text-align: justify;
+            - text-align: center;
+            - text-align: right;
+            - text-align: left; --->
+        <style>
+            h4 { text-align: center; }
+            p { text-align: justify; }
+        </style>
+
+        <!--- 2) Height and Width of an element
+            Can be absolute (px), relative to content (em) or a percentage of the parent element --->
+            <style>
+                h4 { height: 25px; }
+            </style>
+            
+            <style>
+            .links { margin-right: 20px; }
+            .fullCard {
+                width: 350px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                margin: 10px 5px;
+                padding: 4px;
+            }
+            .cardContent { padding: 10px; }
+        </style>
+
+        <div class="fullCard">
+            <div class="cardContent">
+
+                <div class="cardText">
+                    <h4>Text aligned to centre</h4>
+                    <p> Justify means that text aligned so each line has equal width. This section of the curriculum focuses on Applied Visual Design. The first group of challenges build on the given card layout to show a number of core principles.</p>
+                </div>
+
+                <div class="cardLinks">
+                    <a href="https://www.youtube.com/watch?v=F5xrkNeO2QI&ab_channel=BennKnight" target="_blank" class="links">Link 1</a>
+                    <a href="https://www.youtube.com/watch?v=I4q82V0CODg&ab_channel=Zoink" target="_blank" class="links">Link 2</a>
+                </div>
+                
+            </div>
+        </div>
+
+    </body>
